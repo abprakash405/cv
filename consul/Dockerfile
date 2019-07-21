@@ -13,8 +13,6 @@ RUN mv consul /usr/bin
 RUN mkdir /etc/consul.d/ 
 COPY ui.json /etc/consul.d/ui.json
 COPY certs .
-#RUN consul tls ca create
-#RUN consul tls cert create -server
 
 
 RUN cat consul-agent-ca.pem >> /etc/ssl/certs/ca-certificates.crt 
