@@ -18,6 +18,6 @@ COPY certs .
 
 
 RUN cat consul-agent-ca.pem >> /etc/ssl/certs/ca-certificates.crt 
-RUN echo 127.0.0.1 server.dc1.consul >> /etc/hosts
+RUN echo "127.0.0.1 server.dc1.consul" >> /etc/hosts
 
 CMD /usr/bin/consul agent -server -ui -data-dir=/tmp/consul -bootstrap-expect=1 -node=vault -bind=0.0.0.0 -config-dir=/etc/consul.d/
