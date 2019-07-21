@@ -1,3 +1,4 @@
+disable_mlock = true
 storage "consul" {
   address = "server.dc1.consul:8501"
   path = "vault/"
